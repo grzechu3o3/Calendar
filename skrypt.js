@@ -56,7 +56,7 @@ function showCalendar() {
     
     //Dopisanie dni z poprzedniego miesiąca
     for(let x = firstDayIndex; x>0;x--) {
-        days += `<div class="prev-date">${prevLastDay -x +1}</div>`
+        days += `<div class="prev-date">${prevLastDay -x +1}</div>`;
     }
     
     
@@ -69,7 +69,7 @@ function showCalendar() {
             days += `<div class="today">${i}</div>`;
             
         }else if (new Date(current_year, date.getMonth(), i).getDay() == 0) {
-            days += `<div class="sunday">${i}</div>`
+            days += `<div class="sunday">${i}</div>`;
         }
         else 
             days += `<div>${i}</div>`;
@@ -90,13 +90,13 @@ document.querySelector('.previous').addEventListener('click',() => {
         date.setMonth(date.getMonth() -1);
         showCalendar();
     } 
-})
+});
 document.querySelector('.next').addEventListener('click',() => {
     if (year_for_limit <= 2100) {
     date.setMonth(date.getMonth() +1);
     showCalendar();
     }
-})
+});
 
 //Zmiana roku
 document.querySelector('.previous_year').addEventListener('click',() => {
@@ -104,14 +104,14 @@ document.querySelector('.previous_year').addEventListener('click',() => {
         date.setYear(1900+date.getYear()-1);
         showCalendar();
     }
-})
+});
 
 document.querySelector('.next_year').addEventListener('click',() => {
     if (year_for_limit <=2099) {
         date.setYear(1900+date.getYear()+1);
         showCalendar();
     }
-})
+});
 
 //Wyświetla kalendarz dla bieżącego miesiąca
 showCalendar();
