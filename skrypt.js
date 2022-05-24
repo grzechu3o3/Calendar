@@ -1,7 +1,7 @@
 //Pobranie aktualnej daty
 const date = new Date();
 
-//Zmienne dla ograniczenia roku pomiędzy 2000 a 2100
+//Zmienna dla ograniczenia roku pomiędzy 2000 a 2100
 let year_for_limit;
 
 function showCalendar() {
