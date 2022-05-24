@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Akshar', sans-serif;
+    font-family: 'Prompt', sans-serif, -apple-system;
 }
 
 html {
@@ -36,7 +36,7 @@ html {
     align-items: center;
     padding: 0 2rem;
     text-align: center;
-    text-shadow: 0.3rem, 0.5rem rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 2px silver;
     border: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -102,9 +102,22 @@ html {
 .days div:hover:not(.today) {
     background-color: #262626;
     border: 1px solid #777;
-    cursor: pointer;
     border-radius: 10px;
 }
-.previous, .previous_year, .next, .next_year {
+.days div:hover {
+    cursor: pointer;
+}
+.previous, .previous_year, .next, .next_year, .days, .weekdays, .date {
     user-select: none;
+}
+.author {
+    position: absolute;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 1%;
+}
+h5 {
+    font-size: large;
 }
